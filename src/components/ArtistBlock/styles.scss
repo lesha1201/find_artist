@@ -1,0 +1,41 @@
+.artist-block__main {
+  margin-top: 8%;
+  text-align: center;
+}
+
+.artist-block__avatar {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+}
+
+.artist-block__name {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-shadow: -24px 6px 0px rgba(0, 153, 255, 0.4),
+    24px 6px 0px rgba(255, 55, 162, 0.4);
+}
+
+.artist-block__facebook {
+  margin-top: 4%;
+}
+
+.artist-block__events {
+  margin-top: 2.5em;
+  color: #e7eaf3;
+}
+
+.artist-block__events-heading {
+  font-weight: 300;
+  font-size: 3.5rem;
+}
+
+.artist-block__events-list {
+  list-style: none;
+  margin-top: 1em;
+  font-weight: 100;
+}
+
+.artist-block__event:not(:last-child) {
+  margin-bottom: 0.5em;
+}

@@ -13,7 +13,7 @@ function App() {
       <Background />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/artist/:id" exact component={Artist} />
+        <Route path="/artist/:name" exact component={Artist} />
         <Route component={() => <div>Not found</div>} />
       </Switch>
     </div>

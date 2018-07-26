@@ -3,7 +3,13 @@
     [
       "env",
       {
-        "modules": false
+        "targets": {
+          "browsers": [
+            ">0.25%",
+            "not ie 11",
+            "not op_mini all"
+          ]
+        }
       }
     ],
     "react"
@@ -11,15 +17,5 @@
   "plugins": [
     "transform-class-properties",
     "transform-object-rest-spread"
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        [
-          "env"
-        ],
-        "react"
-      ]
-    }
-  }
+  ]
 }

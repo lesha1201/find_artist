@@ -1,0 +1,9 @@
+.artist-page .search-form {
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 590px) {
+  .artist-page .search-form__search {
+    margin-right: 0;
+  }
+}

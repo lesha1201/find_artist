@@ -3,6 +3,12 @@
  */
 
 /*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+$color-blue: #0099ff;
+$color-pink: #ff37a2;
+
+/*------------------------------------*\
   #Basic Settings
 \*------------------------------------*/
 * {
@@ -31,4 +37,57 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.8em 2em;
+  border-radius: 0.3em;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.btn--small {
+  padding: 0.5em 1.1em;
+}
+
+.btn--outline-blue {
+  color: $color-blue;
+  border: 0.15em solid $color-blue;
+
+  &:hover {
+    color: #fff;
+    background: $color-blue;
+  }
+}
+
+.btn--gradient {
+  position: relative;
+  color: #e7eaf3;
+  background-color: $color-blue;
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba($color-blue, 1) 0%,
+    rgba($color-pink, 1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    135deg,
+    rgba($color-blue, 1) 0%,
+    rgba($color-pink, 1) 100%
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba($color-blue, 1) 0%,
+    rgba($color-pink, 1) 100%
+  );
+
+  &:hover {
+    color: #fff;
+  }
 }

@@ -1,0 +1,15 @@
+@media only screen and (max-width: 590px) {
+  .home-page .heading-dot {
+    font-size: 12vw;
+  }
+
+  .home-page .search-form {
+    flex-direction: column;
+  }
+
+  .home-page .search-form__search {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
