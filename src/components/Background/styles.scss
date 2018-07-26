@@ -1,0 +1,55 @@
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(30, 36, 58);
+  background: linear-gradient(
+    45deg,
+    rgba(30, 36, 58, 1) 0%,
+    rgba(76, 94, 142, 1) 100%
+  );
+  z-index: -1;
+}
+
+.bg__pink-wave {
+  position: absolute;
+  left: 0;
+  height: 30%;
+
+  &--01 {
+    top: 0;
+  }
+
+  &--02 {
+    top: -70px;
+    left: -25px;
+  }
+
+  &--03 {
+    top: -140px;
+    left: -50px;
+  }
+}
+
+.bg__blue-wave {
+  position: absolute;
+  right: 0;
+  height: 48%;
+
+  &--01 {
+    bottom: 0px;
+  }
+
+  &--02 {
+    bottom: -70px;
+    right: -40px;
+  }
+
+  &--03 {
+    bottom: -140px;
+    right: -80px;
+  }
+}
