@@ -12,8 +12,6 @@ import ArtistBlock from '../../components/ArtistBlock';
 import { fetchArtist } from '../../modules/artists/actions';
 import Loader from '../../components/Loader';
 
-console.log(throttle);
-
 class Artist extends React.Component {
   state = {
     artist: {},
