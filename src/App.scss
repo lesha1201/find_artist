@@ -2,11 +2,7 @@
  * Base scss file (Settings, Reusable Classes)
  */
 
-/*------------------------------------*\
-  #Colors
-\*------------------------------------*/
-$color-blue: #0099ff;
-$color-pink: #ff37a2;
+@import './styles/colors';
 
 /*------------------------------------*\
   #Basic Settings
@@ -89,5 +85,11 @@ body {
 
   &:hover {
     color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  html {
+    font-size: 50%;
   }
 }

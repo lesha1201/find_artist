@@ -1,9 +1,17 @@
-.artist-page .search-form {
-  margin-top: 5%;
+.artist-page {
+  padding: 2% 0;
 }
 
 @media only screen and (max-width: 590px) {
-  .artist-page .search-form__search {
+  .artist-page {
+    padding: 20px 0;
+  }
+
+  .artist-page .search-form__search-field {
     margin-right: 0;
+  }
+
+  .artist-page .btn {
+    padding: 0.8em 1.2em;
   }
 }

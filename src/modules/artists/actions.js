@@ -11,7 +11,7 @@ export function fetchArtist(name) {
       let artist = false;
 
       for (let i = 0; i < artists.length; i++) {
-        if (artists[i].name === name) {
+        if (artists[i].name.toLowerCase() === name.toLowerCase()) {
           artist = artists[i];
           break;
         }

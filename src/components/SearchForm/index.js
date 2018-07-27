@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import './styles.scss';
-import { fetchArtist } from '../../modules/artists/actions';
 
 class SearchForm extends Component {
+  static defaultProps = {
+    isMobile: false,
+  };
+
   state = {
     artistName: '',
   };
 
   render() {
     const { artistName } = this.state;
+    const { isMobile } = this.props;
     return (
       <form className="search-form" onSubmit={this.onSubmit}>
         <input
@@ -23,7 +28,7 @@ class SearchForm extends Component {
           onChange={this.onChange}
         />
         <button className="btn btn--gradient" type="submit">
-          Search
+          {isMobile ? 'S' : 'Search'}
         </button>
       </form>
     );
@@ -41,5 +46,12 @@ class SearchForm extends Component {
     this.props.history.push('/artist/' + uri);
   };
 }
+
+SearchForm.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
+  isMobile: PropTypes.bool,
+};
 
 export default withRouter(SearchForm);

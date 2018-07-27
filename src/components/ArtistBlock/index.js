@@ -17,6 +17,8 @@ const ArtistBlock = ({ artist }) => {
           <a
             href={artist.facebook_page_url}
             className="btn btn--small btn--outline-blue artist-block__facebook"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Facebook
           </a>
@@ -26,15 +28,14 @@ const ArtistBlock = ({ artist }) => {
       <div className="artist-block__events">
         <h2 className="artist-block__events-heading">Upcoming events</h2>
         <ul className="artist-block__events-list">
-          <li className="artist-block__event">
-            22.02.18 - Russia, Moscow, Encore Beach Club
-          </li>
-          <li className="artist-block__event">
-            22.02.18 - Russia, Moscow, Encore Beach Club
-          </li>
-          <li className="artist-block__event">
-            22.02.18 - Russia, Moscow, Encore Beach Club
-          </li>
+          {artist.events.map(event => (
+            <li className="artist-block__event" key={event.id}>
+              <span className="artist-block__event-date">
+                {new Date(event.datetime).toLocaleDateString()}
+              </span>{' '}
+              - {event.venue.country}, {event.venue.city}, {event.venue.name}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
